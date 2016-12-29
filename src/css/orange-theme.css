@@ -1,0 +1,49 @@
+@charset "UTF-8";
+/* 导航 */
+.gs-nav-bar { background: url("../images/gs-header-bg-orange.png") no-repeat center top; }
+/*.gs-nav-bar .logo a { background: url("../images/gs-logo-orange.png"); }*/
+.gs-nav-bar .nav li a { color: #40505a; }
+.gs-nav-bar .nav li a.active { color: #fff; background: #ff6d1c; }
+.gs-nav-bar .nav li a.active + span { border-top: 7px solid #ff6d1c; }
+.gs-nav-bar .nav li a:hover { color: #fff; background: #ff6d1c; }
+.gs-nav-bar .time-weather { color: #526069; }
+.gs-nav-bar .weather-box .locate { background: url("../images/gs-locate-icon.png") no-repeat right center; }
+
+/* 搜索 */
+.gs-search-bar { background: #40505a; }
+.gs-search-bar input[type='button'] { color: #fff; background: #6c7982; }
+.gs-search-bar .advanced { color: #ff7e37; }
+
+.gs-search-bar .search-tag span { color: #fff; }
+.gs-search-bar .search-tag li a { color: #fff; }
+.gs-search-bar .search-tag li a:hover { color: #ff6d1c; }
+
+.gs-search-bar .weChat-img { background: url("../images/gs-wechat-bg.png") center; }
+
+/* 搜索结果提示 */
+.gs-search-tip { border-bottom: 1px solid #e5e5e5; background: #f8f8f8; }
+.gs-search-tip .desc span { color: #ff6600; }
+
+/* 搜索结果 */
+.m-list-item .tag { background: #ff7d36; }
+.m-list-item a em { color: #ff6600; }
+.m-list-item p em{color: #ff6600;font-style:normal;}
+.xxgk-box-nav li.cur a{
+  color: #ff6600;
+}
+.xxgk-box-nav li:hover a{
+  color: #ff6600;
+  text-decoration: underline;
+}
+/* 智能推荐 */
+.gs-main-rt > .title .keyword { color: #ff6600; }
+
+.m-smart-box .more:hover { color: #ff6d1c; }
+.m-smart-box li p a { color: #666; }
+.m-smart-box li p a:hover { color: #ff6d1c; }
+
+/* 分页 */
+.gs-main-page li.active { background: #ff7d36; }
+.gs-main-page li:hover { background: #ff7d36; }
+
+.gs-footer .link a:hover { color: #ff6d1c; }

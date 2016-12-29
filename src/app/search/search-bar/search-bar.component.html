@@ -1,0 +1,29 @@
+<!--搜索框-->
+<div class="gs-search-bar">
+  <div class="gs-min-wth clearfix">
+    <div class="search-input lf" (keyup.enter)="changeKey()"  >
+      <input type="text"  [(ngModel)]="searchWord"  autocomplete="off" (keyup)="searchTip($event)"  placeholder="{{keyWord}}" (focus)="onInput()"   name="name" required>
+      <input type="button" value="搜索" (click)="changeKey()" >
+      <a routerLink="/advanced" class="advanced">高级检索</a>
+      <div class="search-tips-his" *ngIf="inputFocus&&his">
+        <div class="search-his-title">
+          您曾经搜索过.....
+          <div class="his-btn" (click)="deleteHis()">清除历史</div>
+        </div>
+        <ul class="his-list">
+          <li *ngFor="let hisC of hisList" [class.cur]="hisC==hisSelect"><a (click)="hideTipsAll()" href="/#/search?searchWord={{hisC}}">{{hisC}}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="search-tag lf">
+      <span class="lf">搜索热词：</span>
+      <ul class="lf">
+        <li *ngFor="let hot of hotsKey"><a href="">{{hot.name}}</a></li>
+      </ul>
+    </div>
+    <div class="weChat-img rt">
+      <img src="../../../../dist/images/gs-wechat-img.png" alt="" width="51" height="50">
+    </div>
+  </div>
+</div>
+

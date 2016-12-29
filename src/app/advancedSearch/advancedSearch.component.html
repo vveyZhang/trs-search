@@ -1,0 +1,46 @@
+<div class="advanced-content" (click)="selectClick($event)">
+  <div class="advanced-row">
+    <p class="advanced-label">包含以下<b>全部</b>的关键词</p><input  class="advanced-input" placeholder="请输入关键词" type="text"/>
+  </div>
+  <div class="advanced-row">
+    <p class="advanced-label">包含以下<b>完整</b>的关键词</p><input  class="advanced-input" placeholder="请输入关键词" type="text"/>
+  </div>
+  <div class="advanced-row">
+    <p class="advanced-label">包含以下<b>任意</b>一个关键词</p><input  class="advanced-input" placeholder="请输入关键词" type="text"/>
+  </div>
+  <div class="advanced-row">
+    <p class="advanced-label">不包含以下关键词</p><input  class="advanced-input" placeholder="请输入关键词" type="text"/>
+  </div>
+  <div class="advanced-row">
+    <p class="advanced-label">限定要搜索的网页时间</p><div class="advanced-select" style="z-index: 3" select="list" (click)="selectListClick($event,screenTime)">
+    <p class="advanced-select-label">{{screenTime.select}}</p>
+    <ul class="advanced-select-list" *ngIf="screenTime.show">
+      <li *ngFor="let option of screenTime.option" [class.cur]="option==screenTime.select" (click)="selectTime(option)">{{option}}</li>
+    </ul>
+  </div>
+  </div>
+  <div class="advanced-row">
+    <p class="advanced-label" >所有网页格式和文档</p><div class="advanced-select" (click)="selectListClick($event,screenFormat)" style="z-index: 2">
+    <p class="advanced-select-label">{{screenFormat.select}}</p>
+    <ul class="advanced-select-list" *ngIf="screenFormat.show">
+      <li *ngFor="let option of screenFormat.option" [class.cur]="option==screenFormat.select" (click)="selectFormat(option)">{{option}}</li>
+    </ul>
+  </div>
+
+  </div>
+  <div class="advanced-row">
+    <p class="advanced-label" >所有网页格式和文档</p><div class="advanced-radio">
+    <div style="display: inline-block;" *ngFor="let radio of screenRadio.option">
+      <input (click)="selectRadio(radio)" type="radio" name="time"/><span>{{radio}}</span></div>
+  </div>
+  </div>
+  <div class="advanced-row">
+    <p class="advanced-label" >所有网页格式和文档</p><div class="show-number">
+    <div class="show-number-subtract" (click)="screenNumberSubtract()"></div><p class="">{{screenNumber}}</p><div class="show-number-add" (click)="screenNumberAdd()"></div>
+  </div>
+  </div>
+  <div class="advanced-go-row">
+    <div class="advanced-go">高级检索</div>
+  </div>
+
+</div>

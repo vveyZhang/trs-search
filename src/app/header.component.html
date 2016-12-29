@@ -1,0 +1,41 @@
+<div class="gs-header">
+  <!--导航-->
+  <div class="gs-nav-bar">
+    <div class="gs-min-wth clearfix">
+      <div class="logo lf">
+        <a href=""><img src="images/gs-logo-orange.png" alt=""/></a>
+      </div>
+      <img *ngIf="!isSearch" class="advanced-search-logo" src="images/advanced-search-logo.png" alt=""/>
+      <ul *ngIf="isSearch" class="nav lf">
+        <li><a href="">全部</a><span></span></li>
+        <li><a href="" class="active">政务</a><span></span></li>
+        <li><a href="">政策</a><span></span></li>
+        <li><a href="">互动</a><span></span></li>
+        <li><a href="">服务</a><span></span></li>
+        <li><a href="">便民</a><span></span></li>
+        <li><a href="">图片</a><span></span></li>
+        <li><a href="">视频</a><span></span></li>
+      </ul>
+      <div *ngIf="isSearch" class="time-weather rt">
+        <!--时间-->
+        <div class="time-box lf">
+          <div class="cur-time"><span>14:17</span></div>
+          <div class="cur-date">
+            <span class="date">2016.03.22</span>
+            <span class="weekwend">星期二</span>
+          </div>
+        </div>
+        <!--天气-->
+        <div class="weather-box lf">
+          <div class="weather-icon lf">
+            <img src="../images/gs-weather-icon.png" width="38" height="37" alt="">
+          </div>
+          <div class="temperature lf">
+            <div class="num">23℃</div>
+            <div class="locate">贵阳市</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

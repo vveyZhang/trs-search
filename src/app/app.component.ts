@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {CheckRoute} from "./check-route.server";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  providers:[CheckRoute]
 })
 export class AppComponent {
-  title = 'app works!';
+
 }

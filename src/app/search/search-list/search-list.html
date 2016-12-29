@@ -1,0 +1,17 @@
+<!--搜索结果列表-->
+<div *ngIf="!contentError" class="list-box" xmlns="http://www.w3.org/1999/html">
+  <div *ngFor="let news of listContent;let i=index" >
+    <default-item  [index]="i" [news]="news"></default-item>
+  </div>
+</div>
+<!--分页-->
+<div *ngIf="!contentError" class="gs-main-page clearfix">
+  <ul>
+    <li class="page-btn page-prev" (click)="pageClick()" ><a href="{{pagesUrl}}{{perPage}}" >上一页</a></li>
+    <li class="page-num"  (click)="pageClick()" *ngFor="let num of currentArray" [class.active]="num==pageNumber"><a href="{{pagesUrl}}{{num}}">{{num}}</a></li>
+    <li class="page-btn page-next" (click)="pageClick()"><a href="{{pagesUrl}}{{nextPage}}">下一页</a></li>
+  </ul>
+</div>
+<div *ngIf="contentError" class="search-error" style="text-align: center;height: 300px;line-height: 300px;font-size: 18px;">
+  检索错误，请输入正确的检索词
+</div>
